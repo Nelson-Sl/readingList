@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h1>Register</h1>
+    <form action="/readingList/registration" th:object="${reader}" method="POST" enctype="utf8">
+        <div>
+            <label th:for="username">Username</label>
+            <input th:id="username" th:field="*{reader.username}"/>
+        </div>
+        <div>
+            <label th:for="password">Password</label>
+            <input th:id="password" th:field="*{reader.password}"/>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+<a th:href="@{/login}">login</a>
+</body>
+</html>
